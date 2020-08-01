@@ -2,13 +2,22 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://ec2-18-222-75-187.us-east-2.compute.amazonaws.com",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.4.3",
+    "particles-bg": "^2.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-native-elements": "^2.0.4",
+    "react-reveal-text": "^0.1.1",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
+    "save": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
