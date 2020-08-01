@@ -6,7 +6,6 @@ import { withStyles } from "@material-ui/core/styles";
 import ReactRevealText from 'react-reveal-text';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { styles } from './Constant'
-import { LinearProgress } from '@material-ui/core';
 const useStyles = (theme) => ({
   root: {
     '& .MuiTextField-root': {
@@ -50,8 +49,11 @@ class MultilineTextField extends React.Component {
     this.setState({isSubmitting: true});
     const formData = {"question": this.state.question}
     const requestOptions = {
+      crossDomain: true,
       method: 'POST',
-      headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+      headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     };
     try{
@@ -65,9 +67,6 @@ class MultilineTextField extends React.Component {
         console.log(error.message);
       }else{
         const res = await response.json();
-        if(res.answer == "0"){
-          res.answer = "I can't answer that..";
-        }
         this.setState({
           disabled: false,
           answer: res.answer,
