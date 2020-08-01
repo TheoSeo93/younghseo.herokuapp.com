@@ -52,9 +52,9 @@ class MultilineTextField extends React.Component {
       crossDomain: true,
       method: 'POST',
       headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': '*',
-      'Access-Control-Allow-Headers': '*',
+      'Access-Control-Allow-Origin': 'http://ec2-18-222-75-187.us-east-2.compute.amazonaws.com',
+      'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
+      'Access-Control-Allow-Headers': 'Content-Type',
       'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     };
