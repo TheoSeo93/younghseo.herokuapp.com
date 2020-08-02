@@ -65,6 +65,7 @@ class MultilineTextField extends React.Component {
       if(!response.ok){
         const error = response.status;
         console.log(error.message);
+        console.log(response);
       }else{
         const res = await response.json();
         this.setState({
