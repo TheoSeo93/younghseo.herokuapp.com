@@ -50,7 +50,7 @@ class MultilineTextField extends React.Component {
     const formData = {"question": this.state.question}
     const requestOptions = {
       method: 'POST',
-      // mode: 'cors',
+      credentials: 'include',
       headers: {
           
       'Content-Type': 'application/json' },
