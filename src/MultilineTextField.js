@@ -15,6 +15,7 @@ const useStyles = (theme) => ({
   },
 });
 
+const API = 'https://ec2-18-222-75-187.us-east-2.compute.amazonaws.com/questionAnswer'
 
 class MultilineTextField extends React.Component {
 
@@ -61,7 +62,7 @@ class MultilineTextField extends React.Component {
         messageShow: false,
         disabled: true
       })
-      const response = await fetch('https://ec2-18-222-75-187.us-east-2.compute.amazonaws.com/questionAnswer', requestOptions);
+      const response = await fetch(API, requestOptions);
       if(!response.ok){
         const error = response.status;
         console.log(error.message);
