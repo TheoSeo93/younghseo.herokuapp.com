@@ -33,7 +33,7 @@ class Content extends React.Component {
         <h1>
           <ReactRevealText show={this.state.show} style={styles.textStyle}
             transitionTime={1000} delayMax={0.01}>
-            Youngho
+            Youngho 
           </ReactRevealText>
         </h1>
 
