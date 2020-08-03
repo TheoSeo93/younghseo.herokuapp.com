@@ -61,7 +61,7 @@ class MultilineTextField extends React.Component {
         messageShow: false,
         disabled: true
       })
-      const response = await fetch('/questionAnswer', requestOptions);
+      const response = await fetch('http://ec2-18-222-75-187.us-east-2.compute.amazonaws.com/questionAnswer', requestOptions);
       if(!response.ok){
         const error = response.status;
         console.log(error.message);
